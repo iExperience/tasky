@@ -1,36 +1,26 @@
-<h1>Listing projects</h1>
+<div id="projects_title">
+  <%=image_tag 'favicon.png'%>
+  <h2>Projects</h2>
+  <%= link_to 'New Project', new_project_path, :class => 'action_button' %>
+  <div style="clear:both"></div>
+</div>
 
-<%= form_tag projects_path, :method => 'GET' do %>
+<br/>
+
+<%= form_tag "/projects", method: 'GET', id: 'projects_search' do %>
   <%= text_field_tag 'q', params[:q] %>
-  <%= submit_tag 'SEARCH' %>
 <% end %>
 
-<br/>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<br/><br/>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div id="projects">
+  <%= render "projects" %>
+</div>
 
 <br/>
 
-<%= will_paginate @projects %>
 
 <br/>
 
-<%= link_to 'New Project', new_project_path %>
+

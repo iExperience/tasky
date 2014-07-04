@@ -1,0 +1,34 @@
+<% if @projects.any? %>
+
+<table cellspacing="0" cellpadding="0">
+
+
+  <tbody>
+
+  <% @projects.each do |project| %>
+    <tr>
+      <td class="actions">
+        <%= link_to image_tag('recycle43.png'), project, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to image_tag('edit26.png'), edit_project_path(project) %>
+      </td>
+      <td>
+        <%= link_to project.name, project %></td>
+      </td>
+    </tr>
+  <% end %>
+
+  <tr>
+    <td class="paging" colspan="2">
+      <%= will_paginate @projects %>
+    </td>
+  </tr>
+
+  </tbody>
+
+</table>
+
+<% else %>
+
+  <h3 style="text-align:center;">No matching projects found.</h3>
+
+<% end %>

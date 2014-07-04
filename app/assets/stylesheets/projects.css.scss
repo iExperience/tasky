@@ -1,3 +1,70 @@
 // Place all the styles related to the Projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#projects_title {
+  img { 
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+  h2 { 
+    float: left; 
+    width: 200px; 
+    margin: 0;
+    font-size: 24px;
+    text-transform: uppercase; 
+    vertical-align: middle;
+  }
+  a { float: right; }
+
+  margin-bottom: 30px;
+}
+
+#projects_search {
+  width: 60%;
+  margin: 0px auto;
+}
+
+#projects_search input[type="text"] {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 5px;
+  width: 100%;
+}
+
+#projects {
+  table {
+    margin: 0px auto;
+    width: 80%;
+  }
+
+  th, td {
+    margin: 0;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  td.paging {
+    text-align: right;
+    padding-top: 20px;
+  }
+
+  th {
+    text-align: left;
+    color: #fff;
+    background-color: #4E5FA0;
+  }
+
+  td.actions, th.actions {
+    width: 150px;
+    text-align: right;
+  }
+
+  .pagination {
+    padding-top: 10px;
+  }
+}

@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+body {
+  margin: 0;
+}
+
+div.container {
+  margin: 20px auto;
+  padding: 30px;
+  width: 600px;
+  border: 1px dotted #4E5FA0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #FFF9E9;
+  color: #4E5FA0;
+}
+
+body, p, th, td, h1, h2, h3, h4, h5 {
+  font-family: "Lato", sans-serif;
+}
+
+a, a:visited, a:hover {
+  color: #DD6189;
+}
+
+
+a.action_button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  background-color: #DD6189;
+  color: #fff;
+  width: 100px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+a.action_button:hover {
+  background-color: #4E5FA0;
+}
