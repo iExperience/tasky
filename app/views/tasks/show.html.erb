@@ -1,18 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<% unless @task.file_file_name.blank? %>
 <p>
   <strong>Attachment:</strong>
   <%= image_tag @task.file.url(:thumb) %>
 </p>
+<% end %>
 
 <p>
   <strong>Project:</strong>
-  <%= @task.project_id %>
+  <%= @task.project.name %>
 </p>
 
 <p>
   <strong>Assignee:</strong>
-  <%= @task.assignee_id %>
+  <%= @task.assignee.name %>
 </p>
 
 <p>

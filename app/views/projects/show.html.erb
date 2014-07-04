@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+<h1><%= @project.name %></h1>
 
-<h2>Tasks:</h2>
+<h3>Tasks:</h3>
 <ul>
   <% @project.tasks.each do |task| %>
-    <li><%=task.name%><%=image_tag task.file.url(:thumb)%></li>
+    <li>
+      <%=link_to task.name, task_path(task) %>
+      <%=image_tag task.file.url(:thumb) if task.file_file_name %>
+    </li>
   <% end %>
 </ul>
 
