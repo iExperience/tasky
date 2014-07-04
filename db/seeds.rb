@@ -6,7 +6,10 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-[User, Project, Task, Membership].map(&:destroy_all)
+User.destroy_all
+Project.destroy_all
+Task.destroy_all
+Membership.destroy_all
 
 salman = User.create(:name => "Salman Ansari", :email => "salman@ixperience.co.za")
 zack = User.create(:name => "Zack Chauvin", :email => "zack@ixperience.co.za")

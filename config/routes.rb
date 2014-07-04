@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  resources :tasks
-
   resources :users
 
-  resources :projects
+  resources :projects do
+    resources :tasks, :only => [:index]
+  end
+
+  resources :tasks
 
   root 'projects#index'
 
