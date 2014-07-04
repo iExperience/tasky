@@ -1,6 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'will_paginate'
+gem 'paperclip'
+
+group :development do
+  gem 'jazz_hands'
+  gem 'better_errors'
+  gem 'quiet_assets'
+  gem 'puma'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'

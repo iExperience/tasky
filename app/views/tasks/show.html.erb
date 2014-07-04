@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <strong>Attachment:</strong>
+  <%= image_tag @task.file.url(:thumb) %>
+</p>
+
+<p>
   <strong>Project:</strong>
   <%= @task.project_id %>
 </p>

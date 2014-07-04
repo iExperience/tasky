@@ -27,7 +27,7 @@ class TasksController < ApplicationController
     @task = Task.new(task_params)
 
     respond_to do |format|
-      if @task.save
+      if @task.save!
         format.html { redirect_to @task, notice: 'Task was successfully created.' }
         format.json { render :show, status: :created, location: @task }
       else
@@ -69,6 +69,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.require(:task).permit(:project_id, :assignee_id, :description, :name, :status, :creator_id)
+      params.require(:task).permit(:file, :project_id, :assignee_id, :description, :name, :status, :creator_id)
     end
 end
