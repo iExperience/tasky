@@ -1,16 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @project.name %></h1>
+<h1><%= link_to image_tag('edit26.png'), edit_project_path(@project) %>
+<%= @project.name %></h1>
 
-<h3>Tasks:</h3>
-<ul>
+<ul id="task_list">
   <% @project.tasks.each do |task| %>
     <li>
       <%=link_to task.name, task_path(task) %>
-      <%=image_tag task.file.url(:thumb) if task.file_file_name %>
     </li>
   <% end %>
 </ul>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>

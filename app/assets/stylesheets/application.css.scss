@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);*/
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(../../../fonts/CrYjSnGjrRCn0pd9VQsnFOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Didact Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Didact Gothic'), local('DidactGothic'), url(../../../fonts/v8_72sD3DYMKyM0dn3LtWk3vq9dAc3DuCNWjMJNKvGE.woff) format('woff');
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Oswald Light'), local('Oswald-Light'), url(../../../fonts/HqHm7BVC_nzzTui2lzQTDbO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+
+body {
+  margin: 0;
+}
+
+body, p, th, td, input, h1, h2, h3, h4, h5 {
+  font-family: "Roboto", sans-serif;
+}
+
+a, a:visited, a:hover {
+  color: #DD6189;
+}
+
+div.header {
+  width: 602px;
+  margin: 20px auto 10px auto;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #4E5FA0;
+
+  div.left-item {
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 1px solid #fff;
+  }
+
+  div.right-item {
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 1px solid #fff;
+  }
+
+  div.nav-item {
+    float: left;
+    display: block;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+
+    &.current {
+      background-color: #DD6189;
+    }
+
+    a {
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 38px;
+      width: 100%;
+      display: inline-block;
+      color: #fff;
+      font-size: 16px;
+      text-decoration: none;
+    }
+  }
+}
+
+div.container {
+  margin: 20px auto;
+  padding: 30px;
+  width: 600px;
+  border: 1px solid #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #FFF9E9;
+  color: #4E5FA0;
+}
+
+div.footer {
+  text-align: center;
+  color: #ddd;
+}
+
+a.action_button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  background-color: #DD6189;
+  color: #fff;
+  width: 100px;
+  padding: 5px 15px;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+a.action_button:hover {
+  background-color: #4E5FA0;
+}

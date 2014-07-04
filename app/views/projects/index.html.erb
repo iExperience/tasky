@@ -1,26 +1,11 @@
-<div id="projects_title">
-  <%=image_tag 'favicon.png'%>
-  <h2>Projects</h2>
-  <%= link_to 'New Project', new_project_path, :class => 'action_button' %>
-  <div style="clear:both"></div>
-</div>
-
-<br/>
-
 <%= form_tag "/projects", method: 'GET', id: 'projects_search' do %>
+  <%=link_to image_tag('add11.png'), new_project_path %>
   <%= text_field_tag 'q', params[:q] %>
+  <div style="clear: both"></div>
 <% end %>
-
 
 <br/><br/>
 
 <div id="projects">
   <%= render "projects" %>
 </div>
-
-<br/>
-
-
-<br/>
-
-

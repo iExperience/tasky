@@ -17,12 +17,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :project_id %><br>
-    <%= f.number_field :project_id %>
+    <%= f.label :project %><br>
+    <%= f.select :project_id, @projects %>
   </div>
   <div class="field">
-    <%= f.label :assignee_id %><br>
-    <%= f.number_field :assignee_id %>
+    <%= f.label :assignee %><br>
+    <%= f.select :assignee_id, @users %>
   </div>
   <div class="field">
     <%= f.label :description %><br>

@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= link_to image_tag('edit26.png'), edit_task_path(@task) %>
+<%=@task.name%></h1>
+
 <% unless @task.file_file_name.blank? %>
 <p>
-  <strong>Attachment:</strong>
   <%= image_tag @task.file.url(:thumb) %>
 </p>
 <% end %>
@@ -37,5 +39,3 @@
   <%= @task.creator_id %>
 </p>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>

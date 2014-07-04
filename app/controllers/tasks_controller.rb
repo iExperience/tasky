@@ -4,8 +4,8 @@ class TasksController < ApplicationController
   # GET /tasks
   # GET /tasks.json
   def index
-    @project = Project.find(params[:project_id])
-    @tasks = @project.tasks
+    @project = Project.find(params[:project_id]) if params[:project_id]
+    @tasks = @project ? @project.tasks : Task.all
   end
 
   # GET /tasks/1
@@ -20,6 +20,8 @@ class TasksController < ApplicationController
 
   # GET /tasks/1/edit
   def edit
+    @projects = Project.all.map { |p| [p.name, p.id] }
+    @users = User.all.map { |u| [u.name, u.id] }
   end
 
   # POST /tasks

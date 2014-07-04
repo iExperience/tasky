@@ -8,7 +8,20 @@
 </head>
 <body>
 
+<div class="header">
+  <div class="left-item nav-item <%='current' if controller_name == 'projects' %>"><%=link_to 'Projects', projects_path %></div>
+  <div class="nav-item <%='current' if controller_name == 'users' %>"><%=link_to 'Users', users_path %></div>
+  <div class="right-item nav-item <%='current' if controller_name == 'tasks' %>"><%=link_to 'Tasks', tasks_path %></div>
+  <div style="clear:both;"></div>
+</div>
+
 <div class="container"><%= yield %></div>
+
+<div class="footer">
+  <span>Built with love by Salman Ansari</span>
+  <br/>
+  <span>2014 iXperience</span>
+</div>
 
 </body>
 </html>

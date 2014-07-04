@@ -5,8 +5,8 @@
 #projects_title {
   img { 
     float: left;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
   }
   h2 { 
@@ -23,17 +23,25 @@
 }
 
 #projects_search {
-  width: 60%;
   margin: 0px auto;
-}
+  padding: 0px 70px;
 
-#projects_search input[type="text"] {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  font-size: 20px;
-  padding: 5px;
-  width: 100%;
+  img {
+    display: block;
+    padding: 10px 20px;
+    float: left;
+  }
+
+  input[type="text"] {
+    float: left;
+    display: block;
+    width: 320px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 25px;
+    padding: 5px 10px;
+  }
 }
 
 #projects {
@@ -50,6 +58,7 @@
 
   td.paging {
     text-align: right;
+    padding-right: 50px;
     padding-top: 20px;
   }
 
@@ -66,5 +75,18 @@
 
   .pagination {
     padding-top: 10px;
+  }
+}
+
+ul#task_list {
+  list-style-type: none;
+  padding-left: 0;
+
+  li {
+    margin: 10px 0;
+
+    a {
+      font-size: 20px;
+    }
   }
 }
