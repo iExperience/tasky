@@ -17,7 +17,7 @@ francois = User.create(:name => "Francois Kassier", :email => "francois@ixperien
 
 users = [salman, zack, francois]
 
-project_names = ["Build Curricum", "Write Exercises", "Develop Features", "Pitch Products", "Clean House", "Learn Rails", "Hike Table Mountain", "Visit Bo-Kaap", "Eat Everything", "Dance the Night Away"]
+project_names = ["Build Curriculum", "Write Exercises", "Develop Features", "Pitch Products", "Clean House", "Learn Rails", "Hike Table Mountain", "Visit Bo-Kaap", "Eat Everything", "Dance the Night Away"]
 projects = []
 
 project_names.each do |name|

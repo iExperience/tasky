@@ -4,6 +4,7 @@ This app is a simple project management app with the goal of demonstrating:
 - Rails relations
 - Search
 - Pagination
+- File Attachments
 - AJAX
 - A sense of style... ;)
 
