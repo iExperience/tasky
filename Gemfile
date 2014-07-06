@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'will_paginate'
 gem 'paperclip'
+gem 'lazy_high_charts'
 
 group :development do
   gem 'jazz_hands'

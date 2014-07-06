@@ -5,17 +5,17 @@
 
   <tbody>
 
-  <% @projects.each do |project| %>
-    <tr>
-      <td class="actions">
-        <%= link_to image_tag('recycle43.png'), project, method: :delete, data: { confirm: 'Are you sure?' } %>
-        <%= link_to image_tag('edit26.png'), edit_project_path(project) %>
-      </td>
-      <td>
-        <%= link_to project.name, project_tasks_path(project) %></td>
-      </td>
-    </tr>
-  <% end %>
+    <% @projects.each do |project| %>
+      <tr>
+        <td class="actions">
+          <%= link_to image_tag('recycle43.png'), project, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to image_tag('edit26.png'), edit_project_path(project) %>
+        </td>
+        <td>
+          <%= link_to project.name, project_path(project) %></td>
+        </td>
+      </tr>
+    <% end %>
 
   <tr>
     <td class="paging" colspan="2">

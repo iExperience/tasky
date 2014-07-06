@@ -1,12 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= link_to image_tag('edit26.png'), edit_project_path(@project) %>
-<%= @project.name %></h1>
+<h1>
+  <%= link_to image_tag('edit26.png'), edit_project_path(@project) %>
+  <%= @project.name %>
+</h1>
 
-<ul id="task_list">
-  <% @project.tasks.each do |task| %>
-    <li>
-      <%=link_to task.name, task_path(task) %>
-    </li>
-  <% end %>
-</ul>
+<h2><%= link_to 'View Tasks', project_tasks_path(@project) %></h2>
+
+<%= high_chart("some_id", @chart) %>
+
