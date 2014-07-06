@@ -5,6 +5,10 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.filter(params[:q]).paginate(:per_page => 5, :page => params[:page])
+
+    if request.xhr? 
+      render :partial => 'projects', :layout => nil
+    end
   end
 
   # GET /projects/1
