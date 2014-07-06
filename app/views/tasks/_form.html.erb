@@ -33,13 +33,10 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
+    <%= f.label :due_date %><br>
+    <%= f.date_select :due_date %>
   </div>
-  <div class="field">
-    <%= f.label :creator_id %><br>
-    <%= f.number_field :creator_id %>
-  </div>
+  <br/><br/>
   <div class="actions">
     <%= f.submit %>
   </div>

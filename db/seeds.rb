@@ -33,12 +33,17 @@ tasks = {
   "Build a Castle" => "Become rich, do lots of stuff, then build a castle"
 }
 
+completed_dates = [1.day.ago, 2.days.ago, 3.days.ago, 4.days.ago]
+due_dates = [1.day.from_now, 2.days.from_now, 3.days.from_now, 4.days.from_now]
+
 projects.each do |project|
   tasks.each do |name, desc|
     project.tasks << Task.new(
       :name => name, 
       :description => desc, 
-      :assignee => users[rand(users.size)]
+      :assignee => users[rand(users.size)],
+      :due_date => due_dates[rand(due_dates.size)],
+      :completed_date => (rand(2) == 0) ? completed_dates[rand(completed_dates.size)] : nil
     )
   end
 end

@@ -15,6 +15,8 @@ class TasksController < ApplicationController
 
   # GET /tasks/new
   def new
+    @projects = Project.all.map { |p| [p.name, p.id] }
+    @users = User.all.map { |u| [u.name, u.id] }
     @task = Task.new
   end
 
