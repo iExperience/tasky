@@ -71,6 +71,11 @@
   td.actions, th.actions {
     width: 150px;
     text-align: right;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   .pagination {
