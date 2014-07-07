@@ -14,7 +14,6 @@
 </div>
 
 <div class="header">
-
   <div class="left-item nav-item <%='current' if controller_name == 'projects' %>"><%=link_to 'Projects', projects_path %></div>
   <div class="nav-item <%='current' if controller_name == 'tasks' %>"><%=link_to 'Tasks', tasks_path %></div>
   <div class="right-item nav-item <%='current' if controller_name == 'users' %>"><%=link_to 'Users', users_path %></div>
@@ -24,6 +23,17 @@
 <div class="container"><%= yield %></div>
 
 <div class="footer">
+  <div class="login-actions">
+    <% if user_signed_in? %>
+    Signed in as <%= current_user.name %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path,:method => :delete %>
+    <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or
+    <%= link_to "Sign in", new_user_session_path %> or
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+    <% end %>
+  </div>
+  <br/>
   <span>Built with &#9829 by Salman Ansari</span>
   <br/>
   <span>2014 iXperience</span>

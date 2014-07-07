@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'will_paginate'
 gem 'paperclip'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook' 
 
 gem 'rails_12factor', group: :production
 

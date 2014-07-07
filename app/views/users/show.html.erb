@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% if @user.profile_pic %>
+  <%=image_tag @user.profile_pic %>
+<% end %>
+
 <p>
   <strong>Name:</strong>
   <%= @user.name %>

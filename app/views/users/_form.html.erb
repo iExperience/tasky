@@ -1,3 +1,7 @@
+<% if @user.profile_pic %>
+  <%=image_tag @user.profile_pic %>
+<% end %>
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
