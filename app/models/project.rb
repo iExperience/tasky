@@ -4,7 +4,7 @@ class Project < ActiveRecord::Base
   has_many :users, :through => :memberships
 
   def self.filter(query)
-    query.blank? ? Project.all : Project.where("name LIKE '%#{query}%'")
+    query.blank? ? Project.all : Project.where("lower(name) LIKE '%#{query.downcase}%'")
 
     # SAME AS BELOW.
     # if query.blank?
