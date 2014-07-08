@@ -5,6 +5,10 @@ gem 'paperclip'
 
 gem 'rails_12factor', group: :production
 
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook' 
+
 group :development do
   gem 'jazz_hands'
   gem 'better_errors'
