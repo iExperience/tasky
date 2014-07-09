@@ -11,9 +11,9 @@ Project.destroy_all
 Task.destroy_all
 Membership.destroy_all
 
-salman = User.create(:name => "Salman Ansari", :email => "salman@ixperience.co.za")
-zack = User.create(:name => "Zack Chauvin", :email => "zack@ixperience.co.za")
-francois = User.create(:name => "Francois Kassier", :email => "francois@ixperience.co.za")
+salman = User.create(:name => "Salman Ansari", :email => "salman@ixperience.co.za", :password => "password", :password_confirmation => "password")
+zack = User.create(:name => "Zack Chauvin", :email => "zack@ixperience.co.za", :password => "password", :password_confirmation => "password")
+francois = User.create(:name => "Francois Kassier", :email => "francois@ixperience.co.za", :password => "password", :password_confirmation => "password")
 
 users = [salman, zack, francois]
 

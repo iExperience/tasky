@@ -3,10 +3,6 @@
 <h1><%= link_to image_tag('edit26.png'), edit_project_path(@project) %>
 <%= @project.name %></h1>
 
-<ul id="task_list">
-  <% @project.tasks.each do |task| %>
-    <li>
-      <%=link_to task.name, task_path(task) %>
-    </li>
-  <% end %>
-</ul>
+<h2><%= link_to 'See Tasks', project_tasks_path(@project) %></h2>
+
+<%= high_chart("project_due_dates", @chart) %>

@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'will_paginate'
 gem 'paperclip'
+gem 'lazy_high_charts'
 
 gem 'rails_12factor', group: :production
 
