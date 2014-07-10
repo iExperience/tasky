@@ -3,6 +3,8 @@ class Project < ActiveRecord::Base
   has_many :memberships, :dependent => :destroy
   has_many :users, :through => :memberships
 
+  validates :name, :description, :presence => true
+
   def self.filter(query)
     query.blank? ? Project.all : Project.where("lower(name) LIKE '%#{query.downcase}%'")
 

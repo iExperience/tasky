@@ -6,7 +6,7 @@ class Task < ActiveRecord::Base
   #after_update :send_task_updated_email
 
   validates :project, :presence => true  
-  validates :assignee, :presence => true
+  #validates :assignee, :presence => true
 
   has_attached_file :file, 
     :styles => { :medium => "300x300>", :thumb => "100x100>" }, 

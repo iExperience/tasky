@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 gem 'will_paginate'
 gem 'paperclip'
 gem 'lazy_high_charts'
-
-gem 'rails_12factor', group: :production
-
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook' 
@@ -16,6 +13,16 @@ group :development do
   gem 'quiet_assets'
   gem 'puma'
 end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
+
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'

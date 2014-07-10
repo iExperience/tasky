@@ -31,7 +31,9 @@
 
 <p>
   <strong>Due Date:</strong>
-  <%= @task.due_date.strftime("%b %d, %Y") %>
+  <% if @task.due_date %>
+    <%= @task.due_date.strftime("%b %d, %Y") %>
+  <% end %>
 </p>
 
 <p>
