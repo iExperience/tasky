@@ -21,7 +21,7 @@ project_names = ["Build Curriculum", "Write Exercises", "Develop Features", "Pit
 projects = []
 
 project_names.each do |name|
-  projects << Project.create!(:name => name)
+  projects << Project.create!(:name => name, :description => "Project Description")
 end
 
 tasks = {
